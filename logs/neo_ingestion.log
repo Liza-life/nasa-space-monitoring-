@@ -1,0 +1,36 @@
+2026-02-13 14:31:19.798 | INFO     | base_client:__init__:37 - NASA API Client initialized with key: BVCYCFcC...
+2026-02-13 14:31:19.799 | INFO     | __main__:__init__:31 - NEO Ingestion initialized. Output: data\raw\neo
+2026-02-13 14:31:19.800 | INFO     | __main__:run_full_ingestion:211 - Starting full NEO ingestion for next 7 days
+2026-02-13 14:31:19.800 | INFO     | __main__:fetch_neo_feed:58 - Fetching NEO feed from 2026-02-13 to 2026-02-20
+2026-02-13 14:31:20.991 | INFO     | base_client:_make_request:117 - Successfully fetched data from /neo/rest/v1/feed
+2026-02-13 14:31:21.007 | INFO     | __main__:parse_neo_feed:136 - Parsing NEO feed data
+2026-02-13 14:31:21.010 | INFO     | __main__:parse_neo_feed:180 - Parsed 84 asteroid approach records
+2026-02-13 14:31:21.174 | INFO     | __main__:save_to_parquet:199 - Saved 84 records to data\raw\neo\neo_approaches_20260213.parquet
+2026-02-13 14:31:21.175 | INFO     | __main__:run_full_ingestion:227 - Total asteroids: 84
+2026-02-13 14:31:21.176 | INFO     | __main__:run_full_ingestion:228 - Total approaches: 84
+2026-02-13 14:31:21.176 | INFO     | __main__:run_full_ingestion:229 - Potentially hazardous: 8
+2026-02-13 14:31:21.189 | INFO     | base_client:close:140 - API client session closed
+2026-02-13 15:10:47.676 | INFO     | base_client:__init__:37 - NASA API Client initialized with key: BVCYCFcC...
+2026-02-13 15:10:47.677 | INFO     | __main__:__init__:31 - NEO Ingestion initialized. Output: data\raw\neo
+2026-02-13 15:10:47.681 | INFO     | __main__:run_full_ingestion:211 - Starting full NEO ingestion for next 7 days
+2026-02-13 15:10:47.683 | INFO     | __main__:fetch_neo_feed:58 - Fetching NEO feed from 2026-02-13 to 2026-02-20
+2026-02-13 15:10:48.927 | INFO     | base_client:_make_request:117 - Successfully fetched data from /neo/rest/v1/feed
+2026-02-13 15:10:48.942 | INFO     | __main__:parse_neo_feed:136 - Parsing NEO feed data
+2026-02-13 15:10:48.944 | INFO     | __main__:parse_neo_feed:180 - Parsed 84 asteroid approach records
+2026-02-13 15:10:48.958 | INFO     | __main__:save_to_parquet:199 - Saved 84 records to data\raw\neo\neo_approaches_20260213.parquet
+2026-02-13 15:10:48.959 | INFO     | __main__:run_full_ingestion:227 - Total asteroids: 84
+2026-02-13 15:10:48.959 | INFO     | __main__:run_full_ingestion:228 - Total approaches: 84
+2026-02-13 15:10:48.961 | INFO     | __main__:run_full_ingestion:229 - Potentially hazardous: 8
+2026-02-13 15:10:48.971 | INFO     | base_client:close:140 - API client session closed
+2026-02-13 20:09:37.149 | INFO     | base_client:__init__:37 - NASA API Client initialized with key: BVCYCFcC...
+2026-02-13 20:09:37.150 | INFO     | __main__:__init__:31 - NEO Ingestion initialized. Output: data\raw\neo
+2026-02-13 20:09:37.150 | INFO     | __main__:run_full_ingestion:211 - Starting full NEO ingestion for next 7 days
+2026-02-13 20:09:37.151 | INFO     | __main__:fetch_neo_feed:58 - Fetching NEO feed from 2026-02-13 to 2026-02-20
+2026-02-13 20:09:38.436 | INFO     | base_client:_make_request:117 - Successfully fetched data from /neo/rest/v1/feed
+2026-02-13 20:09:38.449 | INFO     | __main__:parse_neo_feed:136 - Parsing NEO feed data
+2026-02-13 20:09:38.451 | INFO     | __main__:parse_neo_feed:180 - Parsed 84 asteroid approach records
+2026-02-13 20:09:38.619 | INFO     | __main__:save_to_parquet:199 - Saved 84 records to data\raw\neo\neo_approaches_20260213.parquet
+2026-02-13 20:09:38.620 | INFO     | __main__:run_full_ingestion:227 - Total asteroids: 84
+2026-02-13 20:09:38.620 | INFO     | __main__:run_full_ingestion:228 - Total approaches: 84
+2026-02-13 20:09:38.621 | INFO     | __main__:run_full_ingestion:229 - Potentially hazardous: 8
+2026-02-13 20:09:38.632 | INFO     | base_client:close:140 - API client session closed

@@ -1,0 +1,148 @@
+# NASA API Endpoints Configuration
+
+base_url: "https://api.nasa.gov"
+
+endpoints:
+  # Near Earth Object Web Service
+  neo_feed:
+    path: "/neo/rest/v1/feed"
+    description: "Retrieve a list of asteroids based on their closest approach date to Earth"
+    rate_limit: 1000  # requests per hour
+    params:
+      start_date: "required"
+      end_date: "required"
+      api_key: "required"
+    
+  neo_lookup:
+    path: "/neo/rest/v1/neo/{asteroid_id}"
+    description: "Lookup a specific asteroid by ID"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+  
+  neo_browse:
+    path: "/neo/rest/v1/neo/browse"
+    description: "Browse the overall asteroid dataset"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      page: "optional"
+      size: "optional"
+
+  # Astronomy Picture of the Day
+  apod:
+    path: "/planetary/apod"
+    description: "Get astronomy picture of the day"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      date: "optional"
+      start_date: "optional"
+      end_date: "optional"
+      count: "optional"
+      thumbs: "optional"
+
+  # Mars Rover Photos
+  mars_rover_photos:
+    path: "/mars-photos/api/v1/rovers/{rover_name}/photos"
+    description: "Get photos from Mars rovers"
+    rovers:
+      - curiosity
+      - opportunity
+      - spirit
+      - perseverance
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      sol: "optional"
+      earth_date: "optional"
+      camera: "optional"
+      page: "optional"
+
+  mars_rover_manifests:
+    path: "/mars-photos/api/v1/manifests/{rover_name}"
+    description: "Get mission manifest for a Mars rover"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+
+  # DONKI - Space Weather Database
+  donki_cme:
+    path: "/DONKI/CME"
+    description: "Coronal Mass Ejection events"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      startDate: "optional"
+      endDate: "optional"
+
+  donki_flr:
+    path: "/DONKI/FLR"
+    description: "Solar Flare events"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      startDate: "optional"
+      endDate: "optional"
+
+  donki_gst:
+    path: "/DONKI/GST"
+    description: "Geomagnetic Storm events"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      startDate: "optional"
+      endDate: "optional"
+
+  # Earth Observatory
+  earth_imagery:
+    path: "/planetary/earth/imagery"
+    description: "Retrieve Landsat 8 imagery for a location"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      lat: "required"
+      lon: "required"
+      date: "optional"
+      dim: "optional"
+
+  earth_assets:
+    path: "/planetary/earth/assets"
+    description: "Retrieve dates and IDs of available imagery"
+    rate_limit: 1000
+    params:
+      api_key: "required"
+      lat: "required"
+      lon: "required"
+      begin: "optional"
+      end: "optional"
+
+# Data Collection Schedule (cron format)
+schedules:
+  neo_feed: "0 */6 * * *"      # Every 6 hours
+  apod: "0 8 * * *"             # Daily at 8 AM
+  mars_rover: "0 10 * * *"      # Daily at 10 AM
+  donki_events: "0 */12 * * *"  # Every 12 hours
+  earth_imagery: "0 0 * * 0"    # Weekly on Sunday
+
+# Data Retention Policies
+retention:
+  raw_data:
+    neo_feed: 90  # days
+    apod: 365
+    mars_rover: 180
+    donki_events: 180
+    earth_imagery: 90
+  
+  processed_data:
+    all: 730  # 2 years
+
+# Quality Checks
+quality_checks:
+  enabled: true
+  checks:
+    - completeness
+    - uniqueness
+    - validity
+    - timeliness
+    - consistency

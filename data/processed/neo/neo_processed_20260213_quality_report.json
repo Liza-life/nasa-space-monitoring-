@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-13T20:09:39.535972",
+  "total_records": 84,
+  "unique_asteroids": 84,
+  "date_range": {
+    "min": "2026-02-13T00:00:00",
+    "max": "2026-02-20T00:00:00"
+  },
+  "hazardous_count": 8,
+  "hazardous_percentage": "9.52%",
+  "threat_distribution": {
+    "Minimal": 84
+  },
+  "size_distribution": {
+    "Medium (25-140m)": 50,
+    "Small (<25m)": 18,
+    "Large (140m-1km)": 16
+  },
+  "statistics": {
+    "avg_distance_lunar": 87.3173866733869,
+    "min_distance_lunar": 4.492638411,
+    "avg_velocity_kms": 12.58121621340595,
+    "avg_diameter_km": 0.10408853484226191
+  }
+}

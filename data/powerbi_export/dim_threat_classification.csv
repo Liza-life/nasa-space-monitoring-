@@ -1,0 +1,5 @@
+﻿threat_level,threat_order,threat_color,threat_description
+Minimal,1,#44ff44,"Distância segura, sem preocupação"
+Low,2,#ffdd44,Próximo mas sem risco significativo
+Medium,3,#ff9944,Atenção recomendada
+High,4,#ff4444,Potencialmente perigoso - monitoramento crítico
