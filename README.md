@@ -12,13 +12,13 @@
 ## 📸 Screenshots
 
 ### Página 1: Visão Geral
-![Visão Geral](screenshots/pagina1.png)
+![Visão Geral](pagina1.png)
 
 ### Página 2: Análise Detalhada  
-![Análise Detalhada](screenshots/pagina2.png)
+![Análise Detalhada](pagina2.png)
 
 ### Página 3: Alertas e Monitoramento
-![Alertas](screenshots/pagina3.png)
+![Alertas](pagina3.png)
 
 ---
 
